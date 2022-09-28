@@ -1,0 +1,67 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(to top, blue, darkblue);
+  height: 100vh;
+  color: rgb(228, 234, 236);
+}
+body h1 {
+  margin-top: 10vh;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  font-size: 56px;
+  color: beige;
+}
+body h4 {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+  color: beige;
+}
+body h4 a {
+  color: rgb(253, 255, 161);
+  text-decoration: none;
+}
+body h4 a:hover {
+  color: rgb(247, 224, 123);
+}
+body p {
+  display: flex;
+  justify-content: center;
+  font-size: 24px;
+}
+body .box {
+  width: 350px;
+  height: 350px;
+  margin: 10px auto;
+  display: flex;
+  flex-wrap: wrap;
+  z-index: -1;
+}
+body .box div {
+  border-radius: 5px;
+  margin: 4px;
+  width: 30%;
+  height: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 72px;
+}
+body .box div:nth-child(odd) {
+  background-color: #ebfeff;
+}
+body .box div:nth-child(even) {
+  background-color: #c5e6e7;
+}
+body .box div:hover {
+  background-color: #77d8db;
+  border: 2px solid #5fb5b7;
+}/*# sourceMappingURL=master.css.map */

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XO-Game</title>
+
+    <link rel="stylesheet" href="assast/stylsheet/master.css">
+
+</head>
+<body>
+
+    <h1> XO Game</h1>
+    <p>Can you Against me?</p>
+    <h4>Developer <a href="http://humayb.com/"> Homa BahramParvar</a></h4>
+    <div class="box">
+        <div data-status = 'off'>1</div>
+        <div data-status = 'off'>2</div>
+        <div data-status = 'off'>3</div>
+        <div data-status = 'off'>4</div>
+        <div data-status = 'off'>5</div>
+        <div data-status = 'off'>6</div>
+        <div data-status = 'off'>7</div>
+        <div data-status = 'off'>8</div>
+        <div data-status = 'off'>9</div>
+    </div>
+    
+
+</body>
+
+    <script>
+
+        let i = 1
+        let result = []
+        let square = document.querySelectorAll('.box>div')
+        
+        square.forEach(function(item){
+            item.addEventListener('click', (e)=>{
+                
+                if ((item.getAttribute('data-status')) == 'off'){
+                    
+                    if(i % 2){
+                        item.innerHTML= "<img src='assast/images/xo-o.png' width='100px' height='100px'>"
+                    }else{
+                        item.innerHTML="<img src='assast/images/xo-x.png' width='100px' height='100px'>"
+                }
+                i++
+                item.setAttribute('data-status', 'on')
+                }
+
+                for(k=0; k<9; k++){
+                    result[k] = square[k].innerHTML 
+                }
+
+                if((result [0] == result[1]) &&  (result [0] == result[2])){
+                    square[0].style.background='green'
+                    square[1].style.background='green'
+                    square[2].style.background='green'
+
+                    alert("You are winner")
+                    location.reload()
+                }
+
+                else if((result [3] == result[5]) &&  (result [4] == result[5])){
+                    square[3].style.background='green'
+                    square[5].style.background='green'
+                    square[4].style.background='green'
+
+                    alert("You are winner")
+                    location.reload()
+                }
+                else if((result [6] == result[8]) &&  (result [6] == result[7])){
+                    square[6].style.background='green'
+                    square[8].style.background='green'
+                    square[7].style.background='green'
+
+                    alert("You are winner")
+                    location.reload()
+                }
+                else if( (result [0] == result[3]) &&  (result [3] == result[6])){
+                    square[6].style.background='green'
+                    square[0].style.background='green'
+                    square[3].style.background='green'
+
+                    alert("You are winner")
+                    location.reload()
+                }
+                else if( (result [1] == result[4]) &&  (result [4] == result[7])){
+                    square[1].style.background='green'
+                    square[4].style.background='green'
+                    square[7].style.background='green'
+
+                    alert("You are winner")
+                    location.reload()
+                }
+                else if( (result [2] == result[5]) &&  (result [5] == result[8])){
+                    square[2].style.background='green'
+                    square[5].style.background='green'
+                    square[8].style.background='green'
+
+                    alert("You are winner")
+                    location.reload()
+                }
+                else if((result [0] == result[4]) &&  (result [4] == result[8])){
+                    square[0].style.background='green'
+                    square[4].style.background='green'
+                    square[8].style.background='green'
+
+                    alert("You are winner")
+                    location.reload()
+                }
+                else if((result [2] == result[4]) &&  (result [4] == result[6])){
+                    square[2].style.background='green'
+                    square[4].style.background='green'
+                    square[6].style.background='green'
+
+                    alert("You are winner")
+                    location.reload()
+                }
+
+                
+                
+                    
+                
+            })
+        })
+
+    
+    </script>
+
+</html>
